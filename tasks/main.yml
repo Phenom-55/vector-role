@@ -1,0 +1,11 @@
+---
+# Install vector
+- name: "Install vector"
+  when: ansible_facts.virtualization_type == "docker"
+  include_tasks: install_vector_docker.yml
+
+- name: "Install vector"
+  when: ansible_facts.virtualization_type != "docker"
+  include_tasks: install_vector_virtpc.yml
+  
+
