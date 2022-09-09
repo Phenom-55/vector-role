@@ -1,0 +1,23 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: instance
+    image: centos7
+    pre_build_image: true
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
+scenario:
+  test_sequence:
+  - create                                                                      
+  - prepare                                                                     
+  - converge                                                                    
+  - idempotence                                                                 
+  - side_effect                                                                 
+  - verify                                                                      
+  - cleanup                                                                     
+  - destroy
