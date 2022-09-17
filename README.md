@@ -45,5 +45,5 @@ MIT
 Author Information
 ------------------
 
-HW_netolgy
+HW_netology
 
